@@ -1,0 +1,179 @@
+/* Red Cross Emergency Colors */
+        :root {
+             --blue: #02356b;
+            --white: #FFFFFF;
+            --dark-blue: #02356be1;
+            --alert-yellow: #FFF3CD;
+            --alert-red: #F8D7DA;
+            --red: #990000;
+            --dark-red: #C00;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9F9;
+            line-height: 1.6;
+        }
+        
+        .emergency-header {
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--blue);
+        }
+        
+        .emergency-header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+        }
+        
+        .emergency-subtitle {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        
+        .emergency-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .emergency-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--blue);
+        }
+        
+        .emergency-card h2 {
+            color: var(--blue);
+            margin-top: 0;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .emergency-icon {
+            margin-right: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .action-steps {
+            background-color: var(--alert-yellow);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .warning {
+            background-color: var(--alert-red);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid var(--dark-red);
+        }
+        
+        .call-911-btn {
+            display: block;
+            background-color: var(--red);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        
+        .call-911-btn:hover {
+            background-color: var(--dark-red);
+        }
+        
+        .floating-emergency {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--blue);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        footer {
+            background-color: var(--blue);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .emergency-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .emergency-card {
+                padding: 20px;
+            }
+            
+            .floating-emergency {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+              .back-btn {
+            padding: 15px 20px;
+        }
+        
+        .back-btn a {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .back-btn a::before {
+            content: "←";
+            margin-right: 5px;
+        }
+        }
+        .btn {
+  display: block;
+  background-color: var(--white);
+  color: var(--red);
+  border: 2px solid var(--blue);
+  padding: 15px;
+  margin: 20px auto;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--blue);
+  color: var(--white);

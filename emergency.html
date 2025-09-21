@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Response | Red Cross</title>
+    <link rel="stylesheet" href="emergency.css">
+</head>
+<body>
+    
+    <header class="emergency-header">
+        <h1>Extreme Emergency Response</h1>
+        <p class="emergency-subtitle">Situations requiring immediate professional medical help</p>
+    </header>
+    <div class="back-btn">
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <div class="emergency-container">
+        <!-- Cardiac Arrest -->
+        <div class="emergency-card">
+            <h2><span class="emergency-icon">💔</span> Cardiac Arrest</h2>
+            <div class="warning">
+                <strong>LIFE-THREATENING:</strong> Person is unconscious with no pulse or breathing
+            </div>
+            <div class="action-steps">
+                <ol>
+                    <li><strong>Call 911 IMMEDIATELY</strong> (or have someone call)</li>
+                    <li><strong>Begin CPR</strong> if trained:
+                        <ul>
+                            <li>30 chest compressions (2 inches deep at 100-120/min)</li>
+                            <li>2 rescue breaths (if trained and willing)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Use AED</strong> if available - follow voice prompts</li>
+                </ol>
+            </div>
+            <p><strong>Critical Notes:</strong> Do not delay CPR. Continue until EMS arrives or person revives.</p>
+            <a href="tel:911" class="call-911-btn">🚨 CALL 911 NOW 🚨</a>
+        </div>
+        
+        <!-- Severe Trauma -->
+        <div class="emergency-card">
+            <h2><span class="emergency-icon">🚑</span> Major Trauma</h2>
+            <div class="warning">
+                <strong>LIFE-THREATENING:</strong> Car accidents, gunshot wounds, severe falls
+            </div>
+            <div class="action-steps">
+                <ol>
+                    <li><strong>Call 911 IMMEDIATELY</strong></li>
+                    <li><strong>Do NOT move victim</strong> unless in immediate danger</li>
+                    <li><strong>Control bleeding</strong> with direct pressure (use clean cloth)</li>
+                    <li><strong>Stabilize neck</strong> if spinal injury suspected</li>
+                    <li><strong>Keep victim warm</strong> to prevent shock</li>
+                </ol>
+            </div>
+            <p><strong>Critical Notes:</strong> Moving trauma victims can worsen injuries. Wait for EMS.</p>
+            <a href="tel:911" class="call-911-btn">🚨 CALL 911 NOW 🚨</a>
+        </div>
+        
+        <!-- Stroke -->
+        <div class="emergency-card">
+            <h2><span class="emergency-icon">🧠</span> Stroke Symptoms</h2>
+            <div class="warning">
+                <strong>TIME-CRITICAL:</strong> Use FAST test to identify
+            </div>
+            <div class="action-steps">
+                <ol>
+                    <li><strong>F</strong>ace: Ask to smile (one side droops?)</li>
+                    <li><strong>A</strong>rms: Raise both (one drifts down?)</li>
+                    <li><strong>S</strong>peech: Repeat simple phrase (slurred?)</li>
+                    <li><strong>T</strong>ime: Call 911 immediately if any symptoms</li>
+                </ol>
+            </div>
+            <p><strong>Critical Notes:</strong> Note symptom onset time. Every minute counts for treatment.</p>
+            <a href="tel:911" class="call-911-btn">🚨 CALL 911 NOW 🚨</a>
+        </div>
+        
+        <!-- Anaphylaxis -->
+        <div class="emergency-card">
+            <h2><span class="emergency-icon">⚠️</span> Severe Allergic Reaction</h2>
+            <div class="warning">
+                <strong>LIFE-THREATENING:</strong> Swelling, difficulty breathing, hives
+            </div>
+            <div class="action-steps">
+                <ol>
+                    <li><strong>Call 911 IMMEDIATELY</strong></li>
+                    <li><strong>Use EpiPen</strong> if available (outer thigh)</li>
+                    <li><strong>Help administer</strong> if victim cannot</li>
+                    <li><strong>Lie flat</strong> with legs elevated (unless vomiting)</li>
+                    <li><strong>Prepare for second dose</strong> if no improvement in 5-15 mins</li>
+                </ol>
+            </div>
+            <p><strong>Critical Notes:</strong> Even if EpiPen helps, hospital evaluation is mandatory.</p>
+            <a href="tel:911" class="call-911-btn">🚨 CALL 911 NOW 🚨</a>
+        </div>
+    </div>
+
+    <a href="tel:911" class="floating-emergency" title="Call Emergency Services">🚑</a>
+
+    <footer>
+        <p>Red Cross Emergency Protocols © 2023 | These situations ALWAYS require professional medical intervention</p>
+    </footer>
+
+    <script>
+        // Make emergency buttons more prominent
+        document.querySelectorAll('.call-911-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(confirm("Are you sure you want to call 911?")) {
+                    window.location.href = "tel:911";
+                }
+            });
+        });
+        
+        // Pulsing animation for emergency button
+        const emergencyBtn = document.querySelector('.floating-emergency');
+        emergencyBtn.addEventListener('mouseenter', () => {
+            emergencyBtn.style.animation = 'none';
+            emergencyBtn.style.transform = 'scale(1.2)';
+        });
+        
+        emergencyBtn.addEventListener('mouseleave', () => {
+            emergencyBtn.style.animation = 'pulse 1.5s infinite';
+        });
+    </script>
+</body>
+</html>
